@@ -1,13 +1,17 @@
-import Header from './components/header/header';
-import Body from './components/body/body';
+import {BrowserRouter as Router ,Routes, Route} from 'react-router-dom';
+import Home from './pages/home';
+import Generador from './pages/generador';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Body />
-    </div>
+  return (<>
+    <Router>
+      <Routes>
+      <Route path="/" element={ <Home /> } />
+      <Route path="/generate" element={ <Generador /> } />
+      </Routes>
+    </Router>
+    </>
   );
 }
 

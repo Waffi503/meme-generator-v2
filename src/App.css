@@ -1,4 +1,6 @@
-
+body{
+  background-color:var(--main-bg-dark) ;
+}
 :root {
   --main-bg-dark: #222831;
   --main-bg-light-dark: #393E46;
