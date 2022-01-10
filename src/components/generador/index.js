@@ -17,12 +17,13 @@ export default function Generador() {
       }}
       >
     <h1>Generador de Memes</h1>
-    <TextField label="Nombre del meme" variant="outlined" />
+    <TextField label="Nombre del meme" variant="outlined" onChange={(e)=> setTexto(e.target.value)} />
     <TextField label="Descripción" variant="outlined" />
     <TextField label="Url de la imagen" variant="outlined" onChange={(e)=> setMeme(e.target.value)} />
     <Button variant="contained" className="btn-generar" onClick={setMemeProps}>Generar</Button>
     </Box>
     <div className="contain-meme">
+    <h1>{texto}</h1>
     <img src={meme} alt="Meme" className="meme"/>
     </div>
     </div>
